@@ -1,0 +1,30 @@
+1a) render (beside lambda (beside lambda(lambda)))  
+1b) render(above (beside (lambda) (invert lambda))(beside (invert lambda) (lambda)))
+1c) render(flipH (flipV (invert lambda)))
+
+3a)
+square (times2 3)
+~> square (2 * 3) -- using (t2)
+~> square 6       -- arithmetic
+~> 6 * 6          -- using (sqr)
+~> 36		  -- arithmetic
+
+3b)
+pyth 2 2
+~> square 2 + square 2		-- using (py)
+~> square 2 + 2 * 2		-- using (sqr)
+~> square 2 + 4			-- arithmetic
+~> 2 * 2 + 4			-- using (sqr)
+~> 4 + 4			-- arithmetic
+~> 8				-- arithmetic
+
+3c)
+pyth (square 2) 3
+~> square (square 2) + square 3		-- using (py)
+~> square (square 2) + (3 * 3)		-- using (sqr)
+~> square (square 2) + 9		-- arithmetic
+~> square (2 * 2) + 9			-- using (sqr)
+~> square 4 + 9				-- arithmetic
+~> (4 * 4) + 9				-- using (sqr)
+~> 16 + 9				-- arithmetic
+~> 25					-- arithmetic

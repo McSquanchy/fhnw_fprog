@@ -72,7 +72,7 @@ beside = Beside
 -- flipH and flipV through all constructors ...
 -- Now it distributes appropriately over Above, Beside and Over.
 
-flipH, flipV, invert :: Picture -> Picture
+flipH, flipV, invert, rotate180 :: Picture -> Picture
 
 flipH (Above pic1 pic2)  = (flipH pic2) `Above` (flipH pic1)
 flipH (Beside pic1 pic2) = (flipH pic1) `Beside` (flipH pic2)
@@ -83,6 +83,10 @@ flipV (Beside pic1 pic2) = (flipV pic2) `Beside` (flipV pic1)
 flipV pic                = FlipV pic
 
 invert = Negative
+
+rotate180 (Above pic1 pic2)  = (rotate180 pic1) `Above` (rotate180 pic2)
+rotate180 (Beside pic1 pic2) = (rotate180 pic2) `Beside` (rotate180 pic1)
+rotate180 pic           = FlipH (FlipV pic)
 
 -- Library functions
 

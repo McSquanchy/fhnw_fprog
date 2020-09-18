@@ -16,6 +16,3 @@ square x = x * x -- (sqr)
 -- Pythagoras a^2 + b^2 = c^2
 pyth :: Integer -> Integer -> Integer
 pyth a b = square a + square b -- (py)
-
-mana :: Integer -> Integer -> Integer
-mana a b = a * b
