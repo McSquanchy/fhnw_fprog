@@ -116,19 +116,17 @@ Geben Sie eine beliebige legale Implementierung für folgende Definitionen:
 Hinweis: Verzweifeln Sie nicht, wenn Sie eine Funktion nicht implementieren können!
 
 > f1 :: Int -> Int
-> f1 = todo
+> f1 x = 2 * x
 
 > f2 :: (Int, Bool) -> Int
-> f2 = todo
+> f2 (x,y) = if y then x else 0
 
 > f3 :: a -> (a,Int)
-> f3 = todo
+> f3 x = (x, 0)
 
-> f4 :: a -> b
-> f4 = todo
+% > f4 :: a -> b
+% > f4 = f4 
+Lässt sich nicht richtig implementieren
 
 > f5 :: a -> (a ->  b) -> b
-> f5 = todo
-
-
-> todo = error "TODO"
+> f5 x f = f x
