@@ -1,0 +1,1 @@
+[(True,"Pizza Essen"),(True,"Bier"),(False,"Pasta"),(True,"Schwimmen")]
